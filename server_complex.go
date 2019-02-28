@@ -90,7 +90,7 @@ func handleRequests(reqs <-chan *ssh.Request) {
 	}
 }
 
-// Start assigns a pseudo-terminal tty os.File to c.Stdin, c.Stdout,
+// PtyRun starts assigns a pseudo-terminal tty os.File to c.Stdin, c.Stdout,
 // and c.Stderr, calls c.Start, and returns the File of the tty's
 // corresponding pty.
 func PtyRun(c *exec.Cmd, tty *os.File) (err error) {
